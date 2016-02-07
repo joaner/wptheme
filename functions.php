@@ -29,4 +29,16 @@ function disable_wp_emojicons() {
 
 add_action( 'init', 'disable_wp_emojicons' );
 
+
+//Filtering a Class in Navigation Menu Item
+add_filter('nav_menu_css_class' , 'special_nav_class');
+function special_nav_class($classes){
+    $filterClasses = array();
+    if (in_array('current-menu-item', $classes)) {
+        $filterClasses[] = 'active';
+
+    }
+    return $filterClasses;
+}
+
 ?>
