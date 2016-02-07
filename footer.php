@@ -3,7 +3,8 @@
 <hr/>
 <footer class="text-center">
   <p>
-    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
+    Proudly powered by <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a>,
+    Theme by <a href="https://xiaoai.me" rel="nofollow">joaner</a>.
   </p>
 </footer>
 </body>
