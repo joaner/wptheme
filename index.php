@@ -17,9 +17,23 @@
         <?php
         the_content();
         ?>
+        <br/>
+        <div class="row">
+          <div class="col-md-6 col-xs-6 text-left">
+            <?php the_time( get_option( 'date_format' ) ); ?>
+          </div>
+          <?php $categories = get_the_category();
+          if ($categories): ?>
+          <div class="col-md-6 col-xs-6 text-right">
+            <?php foreach ($categories as $category): ?>
+            <a href="<?php echo get_category_link( $category->term_id ); ?>" rel="category" class="label label-info"><?php echo $category->cat_name; ?></a>
+            <?php endforeach; ?>
+          </div>
+          <?php endif; ?>
+        </p>
       </article>
-      <hr/>
       <footer>
+        <hr/>
         <nav>
           <ul class="pager">
             <?php if ($pager_post = get_adjacent_post()): ?>
@@ -40,6 +54,7 @@
             <?php endif; ?>
           <ul>
         </nav>
+        <?php comments_template(); ?>
       </footer>
     </div>
   </div>

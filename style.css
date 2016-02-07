@@ -26,3 +26,20 @@ body {
 #navbar-toggle-cbox {
   display:none;
 }
+
+p {
+  line-height: 2rem;
+  word-break: break-all;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 3rem!important;
+  }
+  h2 {
+    font-size: 2.4rem!important;
+  }
+  h3 {
+    font-size: 1.8rem!important;
+  }
+}
