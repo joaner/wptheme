@@ -46,20 +46,19 @@
     <?php else: ?>
   <br/>
   <div class="row">
-    <div class="col-md-7 col-md-offset-1">
+    <div class="col-md-8 col-md-offset-2">
       <div class="list-group">
 			<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();
+      ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-         the_title( sprintf( '<a href="%s" class="list-group-item" rel="bookmark">', esc_url( get_permalink() ) ), '</a>' );
+        <a href="<?php echo esc_url( get_permalink() ); ?>" class="list-group-item" rel="bookmark">
+          <?php the_title(); ?>
 
-			// End the loop.
+          <span class="pull-right text-muted"><?php echo date('m-d', strtotime($post->post_date)); ?></span>
+        </a>
+      <?php
 			endwhile;
       ?>
       </div>
@@ -76,10 +75,13 @@
         <ul>
       </nav>
     </div>
-
+    <?php
+    /*
     <div class="col-md-3">
       <?php get_sidebar(); ?>
     </div>
+    */
+    ?>
   </div>
 </div>
   <?php endif; ?>
