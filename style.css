@@ -12,3 +12,17 @@ Text Domain: bootstrapreader
 
 for reader
 */
+body {
+  padding-top: 50px;
+}
+
+/* see http://stackoverflow.com/questions/31506684/expand-collapse-mobile-navbar-without-javascript */
+/* show the collapse when navbar toggle is checked */
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block!important;
+}
+
+/* the checkbox used only internally; don't display it */
+#navbar-toggle-cbox {
+  display:none;
+}
