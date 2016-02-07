@@ -7,5 +7,6 @@
     Theme by <a href="https://xiaoai.me" rel="nofollow">joaner</a>.
   </p>
 </footer>
+<?php wp_footer(); ?>
 </body>
 </html>
