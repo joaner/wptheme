@@ -7,7 +7,7 @@
 				</header>
 			<?php endif; ?>
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="post col-md-8 col-md-offset-2">
       <header class="page-header">
         <h1>
           <?php single_post_title(); ?>
@@ -20,7 +20,7 @@
         <br/>
         <div class="row">
           <div class="col-md-6 col-xs-6 text-left">
-            <?php the_time( get_option( 'date_format' ) ); ?>
+            <time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
           </div>
           <?php $categories = get_the_category();
           if ($categories): ?>
@@ -30,7 +30,7 @@
             <?php endforeach; ?>
           </div>
           <?php endif; ?>
-        </p>
+        </div>
       </article>
       <footer>
         <hr/>

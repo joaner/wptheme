@@ -2,7 +2,7 @@
 </div>
 <hr/>
 <footer class="text-center">
-  <p>
+  <p class="text-muted">
     Proudly powered by <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a>,
     Theme by <a href="https://xiaoai.me" rel="nofollow">joaner</a>.
   </p>
