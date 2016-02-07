@@ -43,3 +43,13 @@ p {
     font-size: 1.8rem!important;
   }
 }
+
+body.admin-bar .navbar.navbar-fixed-top {
+  top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .navbar.navbar-fixed-top {
+    top: 46px;
+  }
+}
