@@ -7,7 +7,7 @@
 				</header>
 			<?php endif; ?>
   <div class="row">
-    <div class="post col-md-8 col-md-offset-2">
+    <div class="post col-md-9">
       <header class="page-header">
         <h1>
           <?php single_post_title(); ?>
@@ -57,6 +57,10 @@
         <?php comments_template(); ?>
       </footer>
     </div>
+	<div class="col-md-3 hidden-xs">
+		<div class="post-nav">
+		</div>
+	</div>
   </div>
     <?php else: ?>
   <br/>

@@ -16,10 +16,8 @@ html>body {
   padding-top: 50px;
   background-color: #FDFDF5;
 }
-html>body .post {
-  background-color: #fafafa;
-  color: #222426;
-  border: 1px solid #ddd;
+
+html>body>.container>article{
   margin-top: 20px;
 }
 
@@ -80,6 +78,78 @@ body.admin-bar .navbar.navbar-fixed-top {
 
 @media screen and (max-width: 782px) {
   body.admin-bar .navbar.navbar-fixed-top {
-    top: 46px;
+   top: 46px;
   }
+}
+
+
+
+/* By default it's not affixed in mobile views, so undo that */
+.post-nav.affix {
+  position: static;
+}
+@media (min-width: 768px) {
+  .post-nav {
+    padding-left: 20px;
+  }
+  html>body .post {
+    background-color: #fafafa;
+    color: #222426;
+    border: 1px solid #ddd;
+  }
+}
+
+.post-nav {
+  position: fixed;
+}
+/* All levels of nav */
+.post .anchor::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 70px;
+    margin-top: -70px;
+}
+.post-nav .nav > li > a {
+  display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #767676;
+}
+.post-nav .nav > li > a:hover,
+.post-nav .nav > li > a:focus {
+  padding-left: 19px;
+  color: #563d7c;
+  text-decoration: none;
+  background-color: transparent;
+  border-left: 1px solid #563d7c;
+}
+.post-nav .nav > .active > a,
+.post-nav .nav > .active:hover > a,
+.post-nav .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: bold;
+  color: #563d7c;
+  background-color: transparent;
+  border-left: 2px solid #563d7c;
+}
+
+.post-nav .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.post-nav .nav .nav > li > a:hover,
+.post-nav .nav .nav > li > a:focus {
+  padding-left: 29px;
+}
+.post-nav .nav .nav > .active > a,
+.post-nav .nav .nav > .active:hover > a,
+.post-nav .nav .nav > .active:focus > a {
+  padding-left: 28px;
+  font-weight: 500;
 }
