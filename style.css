@@ -79,6 +79,11 @@ body.admin-bar .navbar.navbar-fixed-top {
 @media screen and (max-width: 782px) {
   body.admin-bar .navbar.navbar-fixed-top {
    top: 46px;
+   position: absolute;
+  }
+
+  html>body {
+    background-color: #fafafa;
   }
 }
 
