@@ -1,10 +1,11 @@
 
-      <hr/>
-      <footer class="text-center">
-        <p class="text-muted">
-          Proudly powered by <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a>,
-          Theme by <a href="https://xiaoai.me" rel="nofollow">joaner</a>.
-        </p>
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <ul class="mdl-mini-footer__link-list">
+            <li>Proudly powered by <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a></li>
+            <li>Theme by <a href="https://xiaoai.me" rel="nofollow">joaner</a></li>
+          </ul>
+        </div>
       </footer>
     </div>
   </main>

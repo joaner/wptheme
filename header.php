@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"/>
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.css">
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.min.css">
 <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
 <title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
 <?php wp_head(); ?>
@@ -26,7 +26,7 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout__title">Simple Layout</span>
+      <span class="mdl-layout__title"><?php wp_title(''); ?></span>
       <div class="mdl-layout-spacer"></div>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
                   mdl-textfield--floating-label mdl-textfield--align-right">
@@ -42,12 +42,15 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
+    <div class="mdl-layout-title sitename mdl-navigation__link">
+      <a class="mdl-typography--headline mdl-color-text--grey-600" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+    </div>
     <div class="mdl-layout-title">
-      <a class="mdl-typography--headline" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-      <?php $description = get_bloginfo( 'description', 'display' ); ?>
-      <?php if ($description): ?>
-        <p class="mdl-typography--subhead"><?php echo $description; ?></p>
-      <?php endif; ?>
+       <img src="<?php echo get_site_icon_url(); ?>" width="96" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+       <?php $description = get_bloginfo( 'description', 'display' ); ?>
+       <?php if ($description): ?>
+          <p class="mdl-typography--subhead mdl-color-text--grey-500" style="margin: 10px auto 0;"><?php echo $description; ?></p>
+       <?php endif; ?>
     </div>
 
         <?php
