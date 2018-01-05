@@ -10,8 +10,22 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, one-column
 Text Domain: material-side
 
-for reader
+custom color style in https://getmdl.io/customize/index.html
 */
+
+body {
+  height: 100%;
+}
+
+.nopadding {
+  padding: 0 0;
+}
+
+li.mdl-navigation__link a {
+  color: inherit;
+  text-decoration: none;
+}
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;

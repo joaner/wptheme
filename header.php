@@ -15,44 +15,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"/>
-<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.min.css">
-<script src="./material.min.js"></script>
+<link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.css">
+<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
 <title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <input type="checkbox" id="navbar-toggle-cbox">
-      <div class="navbar-header">
-        <label for="navbar-toggle-cbox" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
+            mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout__title">Simple Layout</span>
+      <div class="mdl-layout-spacer"></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+        <label class="mdl-button mdl-js-button mdl-button--icon"
+               for="fixed-header-drawer-exp">
+          <i class="material-icons">search</i>
         </label>
-        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-        <?php $description = get_bloginfo( 'description', 'display' ); ?>
-        <?php if ($description): ?>
-        <span class="navbar-text hidden-xs"><?php echo $description; ?></span>
-        <?php endif; ?>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="sample"
+                 id="fixed-header-drawer-exp">
+        </div>
       </div>
-      <?php
-      if ( has_nav_menu( 'primary' ) ):
-					// Primary navigation menu.
-					wp_nav_menu( array(
-						'menu_class'     => 'nav navbar-nav',
-            'menu_id'        => '',
-						'theme_location' => 'primary',
-            'container_class'=> 'collapse navbar-collapse navbar-right hidden-xs',
-            'container_id'   => 'navbar',
-					) );
-       endif;
-       ?>
     </div>
-  </nav>
-</header>
+  </header>
+  <div class="mdl-layout__drawer">
+    <div class="mdl-layout-title">
+      <a class="mdl-typography--headline" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+      <?php $description = get_bloginfo( 'description', 'display' ); ?>
+      <?php if ($description): ?>
+        <p class="mdl-typography--subhead"><?php echo $description; ?></p>
+      <?php endif; ?>
+    </div>
 
-<div class="container">
-  <article>
+        <?php
+          if ( has_nav_menu( 'primary' ) ):
+    	    // Primary navigation menu.
+    		$menu = wp_nav_menu( array(
+    		    'echo'           => false,
+    		    'menu_class'     => 'nopadding',
+                'menu_id'        => '',
+    			'theme_location' => 'primary',
+    			'items_wrap'     => '%3$s',
+    			'depth'          => 0,
+                'container_class'=> 'mdl-navigation',
+                'container_id'   => 'navbar',
+    		) );
+
+            // remove <li> tag and keep attributes
+    		echo str_ireplace(array('><a', '<li', '</li>'), array('', '<a', ''), $menu);
+          endif;
+        ?>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
