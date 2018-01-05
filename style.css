@@ -1,160 +1,36 @@
 /*
-Theme Name: Bootstrap Reader
-Theme URI: http://wordpress.org/themes/bootstrapreader
+Theme Name: Material side
+Theme URI: http://wordpress.org/themes/material-side
 Author: joaner
 Author URI: https://xiaoai.me/
-Description: Just for read (By bootstrap 4)
+Description: Material style with side nav (getmdl.io)
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, one-column
-Text Domain: bootstrapreader
+Text Domain: material-side
 
 for reader
 */
-html>body {
-  padding-top: 50px;
-  background-color: #FDFDF5;
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./font/MaterialIcons-Regular.woff2') format('woff2');
 }
 
-html>body>.container>article{
-  margin-top: 20px;
-}
-
-html>body .post pre {
-  overflow: auto;
-  font-size: 13px;
-  padding: 5px;
-  width: auto;
-  max-width: 100%;
-  display: block;
-  padding-bottom: 20px !ie7;
-  max-height: 600px;
-  background-color: #eee;
-  margin-bottom: 1em;
-  border-radius: 0;
-  border: none;
-}
-/* see http://stackoverflow.com/questions/31506684/expand-collapse-mobile-navbar-without-javascript */
-/* show the collapse when navbar toggle is checked */
-#navbar-toggle-cbox:checked ~ .collapse {
-    display: block!important;
-}
-
-/* the checkbox used only internally; don't display it */
-#navbar-toggle-cbox {
-  display:none;
-}
-
-p {
-  line-height: 2rem;
-  word-break: break-all;
-}
-h1 {
-  margin-top: 3.2rem;
-}
-h2 {
-  margin-top: 2.6rem;
-}
-h3 {
-  margin-top: 2rem;
-}
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 3rem!important;
-  }
-  h2 {
-    font-size: 2.4rem!important;
-  }
-  h3 {
-    font-size: 1.8rem!important;
-  }
-}
-
-body.admin-bar .navbar.navbar-fixed-top {
-  top: 32px;
-}
-
-@media screen and (max-width: 782px) {
-  body.admin-bar .navbar.navbar-fixed-top {
-   top: 46px;
-   position: absolute;
-  }
-
-  html>body {
-    background-color: #fafafa;
-  }
-}
-
-
-
-/* By default it's not affixed in mobile views, so undo that */
-.post-nav.affix {
-  position: static;
-}
-@media (min-width: 768px) {
-  .post-nav {
-    padding-left: 20px;
-  }
-  html>body .post {
-    background-color: #fafafa;
-    color: #222426;
-    border: 1px solid #ddd;
-  }
-}
-
-.post-nav {
-  position: fixed;
-}
-/* All levels of nav */
-.post .anchor::before {
-    content: '';
-    display: block;
-    position: relative;
-    width: 0;
-    height: 70px;
-    margin-top: -70px;
-}
-.post-nav .nav > li > a {
-  display: block;
-  padding: 4px 20px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #767676;
-}
-.post-nav .nav > li > a:hover,
-.post-nav .nav > li > a:focus {
-  padding-left: 19px;
-  color: #563d7c;
-  text-decoration: none;
-  background-color: transparent;
-  border-left: 1px solid #563d7c;
-}
-.post-nav .nav > .active > a,
-.post-nav .nav > .active:hover > a,
-.post-nav .nav > .active:focus > a {
-  padding-left: 18px;
-  font-weight: bold;
-  color: #563d7c;
-  background-color: transparent;
-  border-left: 2px solid #563d7c;
-}
-
-.post-nav .nav .nav > li > a {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 30px;
-  font-size: 12px;
+.material-icons {
+  font-family: 'Material Icons';
   font-weight: normal;
-}
-.post-nav .nav .nav > li > a:hover,
-.post-nav .nav .nav > li > a:focus {
-  padding-left: 29px;
-}
-.post-nav .nav .nav > .active > a,
-.post-nav .nav .nav > .active:hover > a,
-.post-nav .nav .nav > .active:focus > a {
-  padding-left: 28px;
-  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
