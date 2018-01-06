@@ -39,6 +39,11 @@ li.mdl-navigation__link a {
   margin-bottom: 10px;
 }
 
+
+.posts .post {
+  width: 90%;
+  margin: auto;
+}
 pre {
   color: rgba(0,0,0,.87);
   text-shadow: none;
