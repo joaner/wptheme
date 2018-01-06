@@ -28,17 +28,20 @@
     <div class="mdl-layout__header-row">
       <span class="mdl-layout__title"><?php wp_title(''); ?></span>
       <div class="mdl-layout-spacer"></div>
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
-                  mdl-textfield--floating-label mdl-textfield--align-right">
-        <label class="mdl-button mdl-js-button mdl-button--icon"
-               for="fixed-header-drawer-exp">
-          <i class="material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" name="sample"
-                 id="fixed-header-drawer-exp">
-        </div>
-      </div>
+      <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                          mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon"
+                       for="fixed-header-drawer-exp">
+                  <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                  <input class="mdl-textfield__input" type="search"
+                         value="<?php echo get_search_query(); ?>" name="s"
+                         id="fixed-header-drawer-exp" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentysixteen' ); ?>">
+                </div>
+              </div>
+      </form>
     </div>
   </header>
   <div class="mdl-layout__drawer">
