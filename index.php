@@ -8,12 +8,12 @@
 	<?php endif; ?>
   <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset">
+      <br/>
       <article>
         <?php
         the_content();
         ?>
-        <br/>
-        <div class="mdl-grid mdl-grid--no-spacing" style="justify-content: space-between;">
+        <div class="mdl-grid" style="justify-content: space-between;">
           <div class="mdl-cell--middle">
             <time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
           </div>
@@ -29,27 +29,21 @@
           <?php endif; ?>
         </div>
       </article>
+      <hr/>
       <footer>
-        <hr/>
-        <nav>
-          <ul class="pager">
+        <nav class="clearfix">
             <?php if ($pager_post = get_adjacent_post()): ?>
-            <li class="previous">
-              <a href="<?php echo get_permalink( $pager_post->ID ); ?>">
-                <span aria-hidden="true">&larr;</span>
+              <a href="<?php echo get_permalink( $pager_post->ID ); ?>" class="mdl-button mdl-js-button mdl-button--raised">
+                <i class="material-icons">chevron_left</i>
                 <?php echo get_the_title( $pager_post->ID ); ?>
               </a>
-            </li>
             <?php endif; ?>
             <?php if ($pager_post = get_next_post()): ?>
-            <li class="next">
-              <a href="<?php echo get_permalink( $pager_post->ID ); ?>">
+              <a href="<?php echo get_permalink( $pager_post->ID ); ?>" style="float: right;" class="mdl-button mdl-js-button mdl-button--raised">
                 <?php echo get_the_title( $pager_post->ID ); ?>
-                <span aria-hidden="true">&rarr;</span>
+                <i class="material-icons">chevron_right</i>
               </a>
-            </li>
             <?php endif; ?>
-          <ul>
         </nav>
         <?php comments_template(); ?>
       </footer>

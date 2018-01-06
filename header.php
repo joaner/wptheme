@@ -43,13 +43,13 @@
   </header>
   <div class="mdl-layout__drawer">
     <div class="mdl-layout-title sitename mdl-navigation__link">
-      <a class="mdl-typography--headline mdl-color-text--grey-600" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+      <a class="mdl-typography--subhead mdl-color-text--grey-600" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
     </div>
     <div class="mdl-layout-title">
-       <img src="<?php echo get_site_icon_url(); ?>" width="96" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
+       <img src="<?php echo get_site_icon_url(); ?>" width="96" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" class="siteicon" />
        <?php $description = get_bloginfo( 'description', 'display' ); ?>
        <?php if ($description): ?>
-          <p class="mdl-typography--subhead mdl-color-text--grey-500" style="margin: 10px auto 0;"><?php echo $description; ?></p>
+          <p class="mdl-typography--body-1 mdl-color-text--grey-500"><?php echo $description; ?></p>
        <?php endif; ?>
     </div>
 
