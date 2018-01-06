@@ -22,16 +22,16 @@
 		endwhile;
       ?>
       </div>
-      <nav>
-        <ul class="pager">
+      <footer class="mdl-grid">
+        <nav class="clearfix">
           <?php if ($pager = get_previous_posts_link()): ?>
-          <li class="previous">
+          <button class="mdl-button mdl-js-button ">
             <?php echo $pager; ?>
-          </li>
+          </button>
           <?php endif; ?>
           <?php if ($pager = get_next_posts_link()): ?>
-          <li class="next"><?php echo $pager; ?></li>
+          <button class="mdl-button mdl-js-button " style="float: right;"><?php echo $pager; ?></button>
           <?php endif; ?>
-        <ul>
-      </nav>
+        </nav>
+      </footer>
 </div>
