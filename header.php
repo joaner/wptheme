@@ -38,7 +38,7 @@
                 <div class="mdl-textfield__expandable-holder">
                   <input class="mdl-textfield__input" type="search"
                          value="<?php echo get_search_query(); ?>" name="s"
-                         id="fixed-header-drawer-exp" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'twentysixteen' ); ?>">
+                         id="fixed-header-drawer-exp">
                 </div>
               </div>
       </form>
