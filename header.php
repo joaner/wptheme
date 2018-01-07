@@ -74,6 +74,12 @@
     		echo str_ireplace(array('><a', '<li', '</li>'), array('', '<a', ''), $menu);
           endif;
         ?>
+
+    <div class="mdl-typography--caption footer-text">
+        <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a>
+        &
+        <a href="https://github.com/joaner/wptheme" rel="nofollow">Material Lite Theme</a>
+    </div>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">

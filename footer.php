@@ -1,12 +1,4 @@
 
-      <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-          <ul class="mdl-mini-footer__link-list">
-            <li>Proudly powered by <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a></li>
-            <li>Theme by <a href="https://github.com/joaner/wptheme" rel="nofollow">joaner</a></li>
-          </ul>
-        </div>
-      </footer>
     </div>
   </main>
 </div>

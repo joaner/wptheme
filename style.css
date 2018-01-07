@@ -56,6 +56,16 @@ li.mdl-navigation__link a {
 .footer-section .mdl-navigation__link .material-icons {
     font-size: 32px;
 }
+.footer-text {
+    padding-left: 40px;
+    position: absolute;
+    bottom: 0;
+    line-height: 60px!important;
+    color: #BDBDBD;
+}
+.footer-text a {
+    color: inherit;
+}
 
 pre {
   color: rgba(0,0,0,.87);
