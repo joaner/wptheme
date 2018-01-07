@@ -44,6 +44,19 @@ li.mdl-navigation__link a {
   width: 90%;
   margin: auto;
 }
+
+.footer-section .mdl-navigation__link {
+    display: block;
+    padding: 32px 16px;
+}
+.footer-section .mdl-navigation__link span {
+    font-size: 18px;
+    vertical-align: middle;
+}
+.footer-section .mdl-navigation__link .material-icons {
+    font-size: 32px;
+}
+
 pre {
   color: rgba(0,0,0,.87);
   text-shadow: none;

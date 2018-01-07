@@ -22,16 +22,16 @@
 		endwhile;
       ?>
       </div>
-      <footer class="mdl-grid">
-        <nav class="clearfix">
-          <?php if ($pager = get_previous_posts_link()): ?>
-          <button class="mdl-button mdl-js-button ">
-            <?php echo $pager; ?>
-          </button>
-          <?php endif; ?>
-          <?php if ($pager = get_next_posts_link()): ?>
-          <button class="mdl-button mdl-js-button " style="float: right;"><?php echo $pager; ?></button>
-          <?php endif; ?>
-        </nav>
-      </footer>
+      <footer class="mdl-grid mdl-grid--no-spacing mdl-color--indigo footer-section">
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-typography--text-left">
+                  <?php if ($pager = get_previous_posts_link()): ?>
+                    <?php echo str_replace('<a ', '<a class="mdl-navigation__link mdl-color-text--white mdl-color--indigo" ', $pager); ?>
+                  <?php endif; ?>
+              </div>
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-typography--text-right">
+                  <?php if ($pager = get_next_posts_link()): ?>
+                    <?php echo str_replace('<a ', '<a class="mdl-navigation__link mdl-color-text--white mdl-color--indigo" ', $pager); ?>
+                  <?php endif; ?>
+              </div>
+            </footer>
 </div>
