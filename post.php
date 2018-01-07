@@ -1,5 +1,5 @@
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset">
+    <div class="mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop">
         <?php if ( is_home() && ! is_front_page() ) : ?>
         	  <header>
         	    <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
