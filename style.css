@@ -85,12 +85,14 @@ pre {
   tab-size: 4;
 }
 
+/*
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: url('./font/MaterialIcons-Regular.woff2') format('woff2');
 }
+*/
 
 .material-icons {
   font-family: 'Material Icons';
@@ -106,4 +108,14 @@ pre {
   direction: ltr;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+
+/**
+ * Comments Style
+ */
+.comments .mdl-list__item--three-line,
+.comments .mdl-list__item--three-line .mdl-list__item-primary-content,
+.comments .mdl-list__item--three-line .mdl-list__item-text-body {
+    height: auto;
 }
