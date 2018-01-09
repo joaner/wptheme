@@ -127,3 +127,8 @@ pre {
 .comments .mdl-list__item--three-line .mdl-list__item-text-body {
     height: auto;
 }
+
+
+.comment-respond .comment-reply-title {
+    font-size: 24px;
+}

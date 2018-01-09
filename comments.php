@@ -41,14 +41,11 @@ if ( have_comments() ):
             </p>
         </span>
         <?php
-            /* FIXME reply link does not show
-        <span class="mdl-list__item-secondary-content">
-        <a class="mdl-list__item-secondary-action" href="<?php
-                echo esc_url( get_comment_reply_link( array(), $comment, $post ) );
-                ?>"><i class="material-icons">reply</i></a>
-        </span>
-        */
+        $url = add_query_arg( 'replytocom', $comment->comment_ID, get_permalink( $post->ID ) );
         ?>
+        <span class="mdl-list__item-secondary-content">
+            <a class="mdl-list__item-secondary-action" href="<?php echo esc_url( $url ); ?>"><i class="material-icons">reply</i></a>
+        </span>
     </li>
     <?php endforeach; ?>
 </ul>
