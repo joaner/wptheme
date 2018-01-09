@@ -40,9 +40,12 @@ li.mdl-navigation__link a {
 }
 
 
-.posts .post {
-  width: 90%;
-  margin: auto;
+.posts .post.mdl-card {
+  width: 100%;
+}
+.posts .post .mdl-card__actions {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .footer-section .mdl-navigation__link {
