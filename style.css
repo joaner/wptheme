@@ -3,14 +3,16 @@ Theme Name: Material side
 Theme URI: http://wordpress.org/themes/material-side
 Author: joaner
 Author URI: https://xiaoai.me/
-Description: Material style with side nav (getmdl.io)
+Description: Material Design with Side Nav (based on getmdl.io)
 Version: 0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: white, one-column
 Text Domain: material-side
+Tags: two-columns, flexible-header
 
-custom color style in https://getmdl.io/customize/index.html
+Theme Based on Material Design Lite (http://getmdl.io)
+- issue or suggest: https://github.com/joaner/wptheme/issues
+- custom colors: https://getmdl.io/customize/index.html (copy to style.css)
 */
 
 /**
