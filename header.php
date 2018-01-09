@@ -51,8 +51,10 @@
                rel="home"><?php bloginfo( 'name' ); ?></a>
         </div>
         <div class="mdl-layout-title">
-            <img src="<?php echo get_site_icon_url(); ?>" width="96" alt="<?php echo( get_bloginfo( 'title' ) ); ?>"
-                 class="siteicon"/>
+            <?php if ($siteicon = get_site_icon_url()): ?>
+                <img src="<?php echo esc_url( $siteicon ); ?>" width="96" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>"
+                     class="siteicon"/>
+            <?php endif; ?>
             <?php $description = get_bloginfo( 'description', 'display' ); ?>
             <?php if ($description): ?>
             <p class="mdl-typography--body-1 mdl-color-text--grey-500"><?php echo $description; ?></p>

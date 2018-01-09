@@ -1,7 +1,7 @@
 <?php
 
 register_nav_menus( array(
-  'primary' => __( '主菜单', 'twentyfifteen' ),
+  'primary' => __( 'Primary Menu', 'twentyfifteen' ),
 ) );
 
 

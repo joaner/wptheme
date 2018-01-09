@@ -19,7 +19,7 @@
                 <div class="mdl-cell--middle categorys">
                     <?php foreach ($categories as $category): ?>
                     <a href="<?php echo get_category_link( $category->term_id ); ?>" rel="category" class="mdl-chip">
-                        <span class="mdl-chip__text">Basic Chip</span>
+                        <span class="mdl-chip__text"><?php echo $category->name; ?></span>
                     </a>
                     <?php endforeach; ?>
                 </div>
