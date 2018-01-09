@@ -23,7 +23,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer
-            mdl-layout--fixed-header is-upgraded">
+            mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout-icon"></div>
         <div class="mdl-layout__header-row">
