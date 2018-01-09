@@ -32,4 +32,3 @@
         <?php endif; ?>
     </div>
 </footer>
-</div>
