@@ -16,8 +16,8 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/style.css"/>
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.min.css">
-    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
     <title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
     <?php wp_head(); ?>
 </head>
