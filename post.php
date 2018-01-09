@@ -31,7 +31,7 @@
     </div>
   </div>
 <footer class="mdl-grid mdl-grid--no-spacing mdl-color--indigo footer-section">
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-typography--text-left">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-typography--text-left">
             <?php if ($pager_post = get_adjacent_post()): ?>
               <a href="<?php echo get_permalink( $pager_post->ID ); ?>" class="mdl-navigation__link mdl-color-text--white mdl-color--indigo">
                   <i class="material-icons">chevron_left</i>
@@ -39,7 +39,7 @@
               </a>
             <?php endif; ?>
         </div>
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-typography--text-right">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-typography--text-right">
             <?php if ($pager_post = get_next_post()): ?>
               <a href="<?php echo get_permalink( $pager_post->ID ); ?>" class="mdl-navigation__link mdl-color-text--white mdl-color--indigo">
                   <span><?php echo get_the_title( $pager_post->ID ); ?></span>
