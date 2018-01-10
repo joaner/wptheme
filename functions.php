@@ -6,8 +6,8 @@ register_nav_menus( array(
 
 
 // Change ClassName in Navigation Menu Item
-add_filter('nav_menu_css_class' , 'special_nav_class');
-function special_nav_class($classes){
+add_filter('nav_menu_css_class' , 'materialside_special_nav_class');
+function materialside_special_nav_class($classes){
 	$filterClasses = array('mdl-navigation__link');
 	if (in_array('current-menu-item', $classes)) {
 		$filterClasses[] = 'mdl-navigation__link--current';
@@ -16,8 +16,8 @@ function special_nav_class($classes){
 }
 
 
-add_action( 'after_setup_theme', 'wpse_theme_setup' );
-function wpse_theme_setup() {
+add_action( 'after_setup_theme', 'materialside_theme_setup' );
+function materialside_theme_setup() {
     /*
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
@@ -28,6 +28,22 @@ function wpse_theme_setup() {
 
     add_theme_support( 'automatic-feed-links' );
 }
+
+
+// register assets
+function materialside_enqueue_style() {
+	wp_enqueue_style( 'core', get_template_directory_uri() . '/style.css', false );
+	wp_enqueue_style( 'material', get_template_directory_uri() . '/css/material.min.css', false );
+	wp_enqueue_style( 'icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', false );
+}
+
+function materialside_enqueue_script() {
+	wp_enqueue_script( 'material', get_template_directory_uri() . '/js/material.min.js', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'materialside_enqueue_style' );
+add_action( 'wp_enqueue_scripts', 'materialside_enqueue_script' );
+
 
 if ( ! isset( $content_width ) ) $content_width = 900;
 
