@@ -1,10 +1,11 @@
 # Material Side
-Contributors: joaner (xiaoai.me)
-Requires at least: WordPress 4.7
-Version: 0.1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: two-columns, flexible-header
+
+- Contributors: joaner (xiaoai.me)
+- Requires at least: WordPress 4.7
+- Version: 0.1
+- License: GPLv2 or later
+- License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- Tags: two-columns, flexible-header
 
 ## Description
 
@@ -36,7 +37,6 @@ Source: https://material.io/icons/
 
 ## Changelog
 
-###  0.1
-* Released: January 11, 2018
+###  0.1 Released: January 11, 2018
 
 Initial release
