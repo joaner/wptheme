@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
-    <title><?php wp_title( '', true, 'right' ); ?></title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -84,7 +83,7 @@
             <p class="mdl-typography--caption">
                 <a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>">WordPress</a>
                 &
-                <a href="https://github.com/joaner/wptheme" rel="nofollow">Material Lite Theme</a>
+                <a href="https://wordpress.org/themes/material-side" rel="nofollow">Material Lite Theme</a>
             </p>
         </div>
     </div>
