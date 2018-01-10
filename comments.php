@@ -7,14 +7,9 @@
 if ( post_password_required() ) {
 	return;
 }
-?>
 
-<?php
-// comment list
-if ( have_comments() ):
-?>
-<ul class="mdl-list comments">
-    <?php foreach ($comments as $comment): ?>
+function format_comment($comment) {
+    ?>
     <li class="mdl-list__item mdl-list__item--three-line" id="comment-<?php comment_ID() ?>">
         <span class="mdl-list__item-primary-content">
             <?php echo get_avatar($comment, 40, '', '', array('class' => 'mdl-list__item-avatar')); ?>
@@ -41,13 +36,27 @@ if ( have_comments() ):
             </p>
         </span>
         <?php
-        $url = add_query_arg( 'replytocom', $comment->comment_ID, get_permalink( $post->ID ) );
+        $url = add_query_arg( 'replytocom', $comment->comment_ID, get_permalink( $comment->comment_post_ID ) );
         ?>
         <span class="mdl-list__item-secondary-content">
             <a class="mdl-list__item-secondary-action" href="<?php echo esc_url( $url ); ?>"><i class="material-icons">reply</i></a>
         </span>
-    </li>
-    <?php endforeach; ?>
+    <?php
+}
+
+?>
+
+<?php
+// comment list
+if ( have_comments() ):
+?>
+<ul class="mdl-list comments">
+    <?php
+    wp_list_comments( array(
+        'type' => 'comment',
+        'callback' => 'format_comment',
+    ) );
+    ?>
 </ul>
 <?php endif; ?>
 
@@ -114,3 +123,5 @@ comment_form($args);
 
 endif;
 ?>
+
+<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
