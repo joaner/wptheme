@@ -5,8 +5,8 @@
  * Displays all of the head element and everything up until the "site-content" div.
  *
  * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
+ * @subpackage Material_Side
+ * @since Material Side 0.1
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/material.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/material.min.js"></script>
-    <title><?php is_home() ? bloginfo( 'name' ) : wp_title(''); ?></title>
+    <title><?php wp_title( '', true, 'right' ); ?></title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -1,7 +1,7 @@
 <?php
 
 register_nav_menus( array(
-  'primary' => __( 'Primary Menu', 'twentyfifteen' ),
+  'primary' => __( 'Primary Menu', 'material-side' ),
 ) );
 
 

@@ -1,0 +1,57 @@
+# Translation of Themes - Material Side in Chinese (China)
+# This file is distributed under the same license as the Themes - Twenty Sixteen package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-01-10 22:56:24+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: zh_CN\n"
+"Project-Id-Version: Themes - Material Side\n"
+
+#. Theme Name of the plugin/theme
+msgid "Material Side"
+msgstr "Material Side"
+
+#: functions.php
+msgctxt "label"
+msgid "Primary Menu"
+msgstr "主菜单"
+
+#: comments.php
+msgid "Comment"
+msgstr "评论"
+
+#: comments.php
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正在等待审核。"
+
+#: comments.php
+msgid "Comments are closed."
+msgstr "评论已关闭。"
+
+#: comments.php
+msgid "Website"
+msgstr "网站"
+
+#: comments.php
+msgid "Name"
+msgstr "名称"
+
+#: comments.php
+msgid "Email"
+msgstr "邮箱"
+
+#. translators: 1: comment date, 2: comment time
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: none.php
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "我们可能无法找到您需要的内容。或许搜索功能可以帮到您。"
+
+#: none.php
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "准备好发布第一篇文章了？<a href=\"%1$s\">从这里开始</a>。"

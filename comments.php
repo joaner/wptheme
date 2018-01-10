@@ -25,7 +25,7 @@ if ( have_comments() ):
                     <?php
                         /* translators: 1: date, 2: time */
                         printf(
-                            __('%1$s at %2$s'),
+                            __('%1$s at %2$s', 'material-side'),
                             get_comment_date(),
                             get_comment_time()
                         );
@@ -36,7 +36,7 @@ if ( have_comments() ):
                 <?php echo get_comment_text($comment); ?>
                 <?php if ( $comment->comment_approved == '0' ): ?>
                     <br/>
-                    <em class="comment-awaiting-moderation mdl-color-text--red"><?php _e( 'Your comment is awaiting moderation.' ); ?></em>
+                    <em class="comment-awaiting-moderation mdl-color-text--red"><?php _e( 'Your comment is awaiting moderation.', 'material-side' ); ?></em>
                 <?php endif; ?>
             </p>
         </span>
@@ -55,7 +55,7 @@ if ( have_comments() ):
 // If comments are closed and there are comments, let's leave a little note, shall we?
 if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 ?>
-	<p class="no-comments"><?php _e( 'Comments are closed.' ); ?></p>
+	<p class="no-comments"><?php _e( 'Comments are closed.', 'material-side' ); ?></p>
 <?php
 else:
 ?>
@@ -68,15 +68,15 @@ $aria_req = ( $req ? " aria-required='true' " : '' );
 
 $fields = array(
     'author' => array(
-		'label' => __( 'Name' ) . $tips_req,
+		'label' => __( 'Name', 'material-side' ) . $tips_req,
 		'value' => esc_attr( $commenter['comment_author'] ),
 	),
 	'email' => array(
-		'label' => __( 'Email' ) . $tips_req,
+		'label' => __( 'Email', 'material-side' ) . $tips_req,
 		'value' => esc_attr( $commenter['comment_author_email'] ),
 	),
 	'url' => array(
-		'label' => __( 'Website' ),
+		'label' => __( 'Website', 'material-side' ),
 		'value' => esc_attr( $commenter['comment_author_url'] ),
 	),
 );
@@ -95,7 +95,7 @@ foreach ($fields as $field => $labels) {
 html;
 }
 
-$label = _x( 'Comment', 'noun' );
+$label = __( 'Comment', 'material-side' );
 
 $args =  array(
 	'comment_field' => <<<html

@@ -6,24 +6,38 @@
         </header>
         <?php endif; ?>
 
-        <article>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_content(); ?>
             <div class="mdl-grid" style="justify-content: space-between;">
                 <div class="mdl-cell--middle">
                     <time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
                 </div>
-                <?php
-				$categories = get_the_category();
-          		if ($categories):
-				?>
-                <div class="mdl-cell--middle categorys">
-                    <?php foreach ($categories as $category): ?>
-                    <a href="<?php echo get_category_link( $category->term_id ); ?>" rel="category" class="mdl-chip">
-                        <span class="mdl-chip__text"><?php echo $category->name; ?></span>
-                    </a>
-                    <?php endforeach; ?>
+                <div class="mdl-cell--middle">
+                    <?php
+                    $tags = get_the_tags();
+                    if (!empty($tags)):
+                    ?>
+                        <span class="tags">
+                            <?php foreach ($tags as $tag): ?>
+                                <a href="<?php echo get_tag_link( $tag->term_id ); ?>" rel="tag" class="mdl-chip">
+                                    <span class="mdl-chip__text"><?php echo $tag->name; ?></span>
+                                </a>
+                            <?php endforeach; ?>
+                        </span>
+                    <?php endif; ?>
+                    <?php
+                    $categories = get_the_category();
+                    if (!empty($categories)):
+                    ?>
+                    <span class="categorys">
+                        <?php foreach ($categories as $category): ?>
+                        <a href="<?php echo get_category_link( $category->term_id ); ?>" rel="category" class="mdl-chip">
+                            <span class="mdl-chip__text"><?php echo $category->name; ?></span>
+                        </a>
+                        <?php endforeach; ?>
+                    </span>
+                    <?php endif; ?>
                 </div>
-                <?php endif; ?>
             </div>
         </article>
 		<footer>
