@@ -37,6 +37,14 @@ Source: https://material.io/icons/
 
 ## Changelog
 
-###  0.1 Released: January 11, 2018
+###  0.1
+
+Released: January 11, 2018
 
 Initial release
+
+
+### 0.2
+* Released: January 12, 2018
+
+Fix Reviewd Required
