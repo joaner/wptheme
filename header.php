@@ -52,7 +52,7 @@
             <?php endif; ?>
             <?php $description = get_bloginfo( 'description', 'display' ); ?>
             <?php if ($description): ?>
-            <p class="mdl-typography--body-1 mdl-color-text--grey-500"><?php echo $description; ?></p>
+            <p class="mdl-typography--body-1 mdl-color-text--grey-500"><?php echo esc_html( $description ); ?></p>
             <?php endif; ?>
         </div>
 

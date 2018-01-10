@@ -29,7 +29,7 @@
             ?>
             <div class="mdl-grid" style="justify-content: space-between;">
                 <div class="mdl-cell--middle">
-                    <time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
+                    <time datetime="<?php esc_attr( the_time('Y-m-d H:i:s') ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
                 </div>
                 <div class="mdl-cell--middle">
                     <?php
@@ -38,8 +38,8 @@
                     ?>
                         <span class="tags">
                             <?php foreach ($tags as $tag): ?>
-                                <a href="<?php echo get_tag_link( $tag->term_id ); ?>" rel="tag" class="mdl-chip">
-                                    <span class="mdl-chip__text"><?php echo $tag->name; ?></span>
+                                <a href="<?php echo esc_url( get_tag_link( $tag->term_id ) ); ?>" rel="tag" class="mdl-chip">
+                                    <span class="mdl-chip__text"><?php echo esc_html( $tag->name ); ?></span>
                                 </a>
                             <?php endforeach; ?>
                         </span>
@@ -50,8 +50,8 @@
                     ?>
                     <span class="categorys">
                         <?php foreach ($categories as $category): ?>
-                        <a href="<?php echo get_category_link( $category->term_id ); ?>" rel="category" class="mdl-chip">
-                            <span class="mdl-chip__text"><?php echo $category->name; ?></span>
+                        <a href="<?php echo esc_url( get_category_link( $category->term_id ) ); ?>" rel="category" class="mdl-chip">
+                            <span class="mdl-chip__text"><?php echo esc_html( $category->name ); ?></span>
                         </a>
                         <?php endforeach; ?>
                     </span>
@@ -67,18 +67,18 @@
 <footer class="mdl-grid mdl-grid--no-spacing mdl-color--indigo footer-section">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-typography--text-left">
         <?php if ($pager_post = get_adjacent_post()): ?>
-        <a href="<?php echo get_permalink( $pager_post->ID ); ?>"
+        <a href="<?php echo esc_url( get_permalink( $pager_post->ID ) ); ?>"
            class="mdl-navigation__link mdl-color-text--white mdl-color--indigo">
             <i class="material-icons">chevron_left</i>
-            <span><?php echo get_the_title( $pager_post->ID ); ?></span>
+            <span><?php echo esc_html( get_the_title( $pager_post->ID ) ); ?></span>
         </a>
         <?php endif; ?>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--12-col-phone mdl-typography--text-right">
         <?php if ($pager_post = get_next_post()): ?>
-        <a href="<?php echo get_permalink( $pager_post->ID ); ?>"
+        <a href="<?php echo esc_url( get_permalink( $pager_post->ID ) ); ?>"
            class="mdl-navigation__link mdl-color-text--white mdl-color--indigo">
-            <span><?php echo get_the_title( $pager_post->ID ); ?></span>
+            <span><?php echo esc_html( get_the_title( $pager_post->ID ) ); ?></span>
             <i class="material-icons">chevron_right</i>
         </a>
         <?php endif; ?>
