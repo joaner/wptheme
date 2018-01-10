@@ -8,6 +8,25 @@
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <?php the_content(); ?>
+
+            <?php
+            // post content include <!--nextpage--> to toggle this
+            $linkPagesHtml = wp_link_pages( array(
+            	'before'      => '<div class="mdl-grid" style="justify-content: space-between;">',
+            	'after'       => '</div>',
+            	'separator'   => '',
+            	'next_or_number' => 'next',
+            	'previouspagelink' => '<i class="material-icons">chevron_left</i>',
+            	'nextpagelink'  => '<i class="material-icons">chevron_right</i>',
+                'echo'        => false,
+            ) );
+
+            if ($linkPagesHtml) {
+                echo str_replace('<a ', '<a class="mdl-js-button mdl-button--fab" ', $linkPagesHtml);
+                echo '<br/>';
+            }
+
+            ?>
             <div class="mdl-grid" style="justify-content: space-between;">
                 <div class="mdl-cell--middle">
                     <time datetime="<?php the_time('Y-m-d H:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>

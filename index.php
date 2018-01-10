@@ -17,4 +17,5 @@ if ( have_posts() ) {
     get_template_part( 'none' );
 }
 
+
 get_footer();
